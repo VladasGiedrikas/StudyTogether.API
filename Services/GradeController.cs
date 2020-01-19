@@ -12,7 +12,6 @@ namespace StudyTogether.API.Services
     {
         List<Grade> GetAllGrades();
         List<Grade> GetGradeById(int quizId);
-        bool InsertGrade(List<Grade> entries);
         bool InsertGrade(Grade entries);
         bool UpdateGradesList(List<Grade> entries);
         bool DeleteGrade(int GradeId);
@@ -44,10 +43,9 @@ namespace StudyTogether.API.Services
 
         #region POST
 
-        public bool InsertGrade(List<Grade> entries)
+        public bool InsertGrade(Grade entries)
         {
-
-            _context.Grades.AddRange(entries);
+            _context.Grades.Add(entries);
             _context.SaveChanges();
             return true;
         }
@@ -95,14 +93,6 @@ namespace StudyTogether.API.Services
 
             return score;
         }
-
-        public bool InsertGrade(Grade entries)
-        {
-            _context.Grades.Add(entries);
-            _context.SaveChanges();
-            return true;
-        }
-
         #endregion
     }
 }

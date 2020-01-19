@@ -7,11 +7,11 @@ namespace StudyTogether.API.Controllers
 {
     [Produces("application/json")]
     [Route("/api/[controller]")]
-    public class GradeController : ControllerBase
+    public class GradesController : ControllerBase
     {
         private readonly IGradeServices _main;
 
-        public GradeController(IGradeServices main)
+        public GradesController(IGradeServices main)
         {
             _main = main;
         }
@@ -28,11 +28,6 @@ namespace StudyTogether.API.Controllers
             return _main.GetGradeById(quizId);
         }
 
-        [HttpPost("", Name = "Grades_InsertGrade")]
-        public ActionResult<bool> InsertGrade([FromBody] List<Grade> entries)
-        {
-            return _main.InsertGrade(entries);
-        }
 
         [HttpPost("insetGrade", Name = "Grades_InsertGrade")]
         public ActionResult<bool> InsertGrade([FromBody] Grade entries)

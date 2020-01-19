@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="StudyTogether.API.Controllers.AnswersController" Collapsed="true">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAhAAAAAAAAAAAIAAACADAAAAEAA=</HashCode>
+      <FileName>Controllers\AnswersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Controllers.GradesController" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAAAAAAAEAAAAAEAAAAAAAAAAADAAAAEAA=</HashCode>
+      <FileName>Controllers\GradesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Controllers.QuestionsController" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABACEAAAAAAAQAAAAACAAAAAAAAACAAAAEAA=</HashCode>
+      <FileName>Controllers\QuestionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Controllers.QuizController" Collapsed="true">
+    <Position X="9" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEEAAAAAAAAAIAAAAAAAAAAAASAAAAAAA=</HashCode>
+      <FileName>Controllers\QuizController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Controllers.StudentsController">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAAAAEAAAEAAAAAAAAAAAAAAAIAQACAAAAAAA=</HashCode>
+      <FileName>Controllers\StudentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Models.Answer" Collapsed="true">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAAACiAAAAgAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Models.Grade" Collapsed="true">
+    <Position X="14.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAQAAAAgAAAAAAAAAACACAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Grade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Models.Question" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAAACAAAAAwAgAAABAAAAAAAgAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Models.Quiz" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAIACAAAAAgAAAAIAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Quiz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Models.Student" Collapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAAAAgAAAAAAAAAAAAAAAAAACAAgAAAACAAA=</HashCode>
+      <FileName>Models\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudyTogether.API.Services.AnswersServices" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACABAAAAhAAAAAAAAAAAIAAACABAAAAEAA=</HashCode>
+      <FileName>Services\AnswerServices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StudyTogether.API.Services.GradeServices" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAABAAAAEAAAAAEAAAAAAAAAAABAAAAEAA=</HashCode>
+      <FileName>Services\GradeController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StudyTogether.API.Services.QuestionsServices" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABACEBAAAAAAQAAAAACAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Services\QuestionServices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StudyTogether.API.Services.QuizesServices" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEFAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Services\QuizServices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StudyTogether.API.Services.StudentsServices" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAAAAEBAAEAAAAAAAAAAAAAAAIAQAAAAAAAAA=</HashCode>
+      <FileName>Services\StudentServices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" Collapsed="true" />
+  </Class>
+  <Interface Name="StudyTogether.API.Services.IAnswersServices" Collapsed="true">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAhAAAAAAAAAAAIAAACABAAAAEAA=</HashCode>
+      <FileName>Services\AnswerServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StudyTogether.API.Services.IGradeServices" Collapsed="true">
+    <Position X="11.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAAAAAAAEAAAAAEAAAAAAAAAAABAAAAEAA=</HashCode>
+      <FileName>Services\GradeController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StudyTogether.API.Services.IQuestionsServices" Collapsed="true">
+    <Position X="13" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABACEAAAAAAAQAAAAACAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Services\QuestionServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StudyTogether.API.Services.IQuizesServices" Collapsed="true">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEEAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Services\QuizServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StudyTogether.API.Services.IStudentsServices">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAAAAEAAAEAAAAAAAAAAAAAAAIAQAAAAAAAAA=</HashCode>
+      <FileName>Services\StudentServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

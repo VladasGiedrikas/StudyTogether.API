@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using StudyTogether.API.Data;
+﻿using StudyTogether.API.Data;
 using StudyTogether.API.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +7,7 @@ namespace StudyTogether.API.Services
 {
     public interface IStudentsServices
     {
+
         List<Student> GetAllStudents();
         Student GetStudentById(int studentId);
         Student GetStudentCheck(string studentName, string studetPassword);
