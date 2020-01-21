@@ -7,7 +7,6 @@ using System.Linq;
 
 namespace StudyTogether.API.Services
 {
-
     public interface IGradeServices
     {
         List<Grade> GetAllGrades();
@@ -25,7 +24,6 @@ namespace StudyTogether.API.Services
         {
             _context = context;
         }
-        #region GET
 
         public List<Grade> GetAllGrades()
         {
@@ -38,10 +36,6 @@ namespace StudyTogether.API.Services
             var entry = _context.Grades.Where(x => x.QuizNumber == quizId).ToList();               
             return entry;
         }
-
-        #endregion
-
-        #region POST
 
         public bool InsertGrade(Grade entries)
         {
@@ -59,9 +53,6 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-        #endregion
-
-        #region DELETE
 
         public bool DeleteGrade(int GradeId)
         {
@@ -77,22 +68,19 @@ namespace StudyTogether.API.Services
             double totalCorect = 0;
             double score = 0;
 
-            var questions = _context.Answers.Where(x => x.QuizNumber == quizId).ToList();
+            var questions = _context.Questions.Where(x => x.QuizNumber == quizId).ToList();
 
-            foreach (var item in questions)
+            foreach (var item in answers)
             {
-                var test = answers.Where(x => x.AnswerNumber == item.AnswerNumber).FirstOrDefault().CorectAnswer;
+                var test = questions.Where(x => x.QuestionNumber == item.QuestionNumber).FirstOrDefault().CorectAnswer;
                 if (test == item.StudentAnswer)
                 {
                     totalCorect++;
                 }
             }
-            double alltotal = answers.Count;
-            score = ((totalCorect / alltotal) * 100);
-
-
+            double alltotal = questions.Count;
+            score = Math.Round(((totalCorect / alltotal) * 10), 2);
             return score;
         }
-        #endregion
     }
 }

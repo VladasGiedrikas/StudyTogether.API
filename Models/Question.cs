@@ -1,5 +1,6 @@
 ﻿namespace StudyTogether.API.Models
 {
+    //klasė modelis, pagal kuri kuriamas lenteles duonbazėje
     public class Question
     {
         public int QuestionId { get; set; }

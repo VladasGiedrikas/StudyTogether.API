@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace StudyTogether.API.Models
+﻿namespace StudyTogether.API.Models
 {
     public class Answer
     {

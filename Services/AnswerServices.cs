@@ -1,13 +1,10 @@
 ﻿using StudyTogether.API.Data;
 using StudyTogether.API.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace StudyTogether.API.Services
 {
-
     public interface IAnswersServices
     {
         List<Answer> GetAllAnswers();
@@ -26,7 +23,6 @@ namespace StudyTogether.API.Services
         {
             _context = context;
         }
-        #region GET
 
         public List<Answer> GetAllAnswers()
         {
@@ -40,13 +36,8 @@ namespace StudyTogether.API.Services
             return entry;
         }
 
-        #endregion
-
-        #region POST
-
         public bool InsertAnswer(List<Answer> entries)
         {
-
             _context.Answers.AddRange(entries);
             _context.SaveChanges();
             return true;
@@ -61,9 +52,6 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-        #endregion
-
-        #region DELETE
 
         public bool DeleteAnswer(int AnswerId)
         {
@@ -91,18 +79,14 @@ namespace StudyTogether.API.Services
             }
             double alltotal = Answers.Count;
             score = ((totalCorect / alltotal) * 100);
-
             
             return score;
         }
-
         public bool InsertGrade(Grade entries)
         {
             _context.Grades.Add(entries);
             _context.SaveChanges();
             return true;
         }
-
-        #endregion
     }
 }

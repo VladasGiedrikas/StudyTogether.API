@@ -1,14 +1,10 @@
 ﻿using StudyTogether.API.Data;
 using StudyTogether.API.Models;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-
 
 namespace StudyTogether.API.Services
 {
-
     public interface IQuizesServices
     {
         List<Quiz> GetAllQuizes();
@@ -26,7 +22,6 @@ namespace StudyTogether.API.Services
         {
             _context = context;
         }
-        #region GET
 
         public List<Quiz> GetAllQuizes()
         {
@@ -38,10 +33,6 @@ namespace StudyTogether.API.Services
             var entry = _context.Quizzes.Where(x => x.StudentNumber == quizId).ToList();               
             return entry;
         }
-
-        #endregion
-
-        #region POST
 
         public bool InsertQuiz(List<Quiz> entries)
         {
@@ -60,9 +51,6 @@ namespace StudyTogether.API.Services
             return true;
         }
 
-        #endregion
-
-        #region PUT
 
         public bool InsertQuiz(Quiz entry)
         {                    
@@ -70,10 +58,6 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-
-        #endregion
-
-        #region DELETE
 
         public bool DeleteQuiz(int QuizId)
         {
@@ -83,7 +67,5 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-
-        #endregion
     }
 }

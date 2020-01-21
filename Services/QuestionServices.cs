@@ -1,33 +1,33 @@
 ﻿using StudyTogether.API.Data;
 using StudyTogether.API.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace StudyTogether.API.Services
 {
-
+    
     public interface IQuestionsServices
     {
+        // interface metodu deklaracijos
         List<Question> GetAllQuestions();
         List<Question> GetQuestionById(int quizId);
         bool InsertQuestion(List<Question> entries);
         bool InsertQuiz( Quiz entry);
         bool UpdateQuestionsList(List<Question> entries);
         bool DeleteQuestion(int questionId);
-        double GetGrade(List<Answer> answers, int quizId);
     }
 
+    //nurodome koki interface naudosime
     public class QuestionsServices : IQuestionsServices
     {
         private readonly StudyTogetherDbContext _context;
         public QuestionsServices(StudyTogetherDbContext context)
         {
-            _context = context;
+            //konstriuktorius, kuriame priskirimas objektas 
+            _context = context; 
         }
-        #region GET
 
+        // iplementuoti metodai nurodyti interface
         public List<Question> GetAllQuestions()
         {
             return _context.Questions.ToList();                      
@@ -39,10 +39,6 @@ namespace StudyTogether.API.Services
             var entry = _context.Questions.Where(x => x.QuizNumber == quizId).ToList();               
             return entry;
         }
-
-        #endregion
-
-        #region POST
 
         public bool InsertQuestion(List<Question> entries)
         {
@@ -62,10 +58,6 @@ namespace StudyTogether.API.Services
             return true;
         }
 
-        #endregion
-
-        #region PUT
-
         public bool InsertQuiz(Quiz entry)
         {                    
             _context.Quizzes.Add(entry);
@@ -73,38 +65,12 @@ namespace StudyTogether.API.Services
             return true;
         }
 
-        #endregion
-
-        #region DELETE
-
         public bool DeleteQuestion(int questionId)
         {
-
             var delete = _context.Questions.FirstOrDefault(x => x.QuestionNumber.Equals(questionId));
             _context.Questions.Remove(delete);
             _context.SaveChanges();
             return true;
         }
-
-        public double GetGrade(List<Answer> answers, int quizId)
-        {
-            double totalCorect = 0;
-            double score = 0;
-
-            var questions = _context.Questions.Where(x => x.QuizNumber == quizId).ToList();
-                               
-            foreach (var item in answers)
-            {
-                var test = questions.Where(x => x.QuestionNumber == item.QuestionNumber).FirstOrDefault().CorectAnswer;
-                if (test == item.StudentAnswer)
-                {
-                    totalCorect++;
-                }
-            }
-            double alltotal = questions.Count;
-            score = ((totalCorect / alltotal) * 10);            
-            return score;
-        }
-        #endregion
     }
 }

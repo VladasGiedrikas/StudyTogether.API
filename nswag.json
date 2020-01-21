@@ -4,10 +4,11 @@
   "documentGenerator": {
     "webApiToOpenApi": {
       "controllerNames": [
-        "StudyTogether.API.Controllers.QuestionsController",
-        "StudyTogether.API.Controllers.StudentsController",
         "StudyTogether.API.Controllers.AnswersController",
-        "StudyTogether.API.Controllers.QuizController"
+        "StudyTogether.API.Controllers.QuestionsController",
+        "StudyTogether.API.Controllers.QuizController",
+        "StudyTogether.API.Controllers.StudentsController",
+        "StudyTogether.API.Controllers.GradesController"
       ],
       "isAspNetCore": true,
       "resolveJsonOptions": false,

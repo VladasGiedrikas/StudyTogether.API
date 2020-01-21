@@ -7,7 +7,6 @@ namespace StudyTogether.API.Services
 {
     public interface IStudentsServices
     {
-
         List<Student> GetAllStudents();
         Student GetStudentById(int studentId);
         Student GetStudentCheck(string studentName, string studetPassword);
@@ -23,7 +22,6 @@ namespace StudyTogether.API.Services
         {
             _context = context;
         }
-        #region GET
 
         public List<Student> GetAllStudents()
         {
@@ -40,18 +38,14 @@ namespace StudyTogether.API.Services
         {
             return _context.Students.Where(x => x.StudentName == studentName && x.Password == studetPassword).FirstOrDefault();
         }
-        #endregion
 
-        #region POST
         public bool InsertStudent(Student entry)
         {                 
             _context.Students.Add(entry);
             _context.SaveChanges();
             return true;
         }
-        #endregion
 
-        #region PUT
         public bool UpdateStudent(int studentId, Student entry)
         {
             var delete = _context.Students.FirstOrDefault(x => x.StudentNumber.Equals(studentId));
@@ -60,9 +54,6 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-        #endregion
-
-        #region DELETE
 
         public bool DeleteStudent(int StudentId)
         {
@@ -72,6 +63,5 @@ namespace StudyTogether.API.Services
             _context.SaveChanges();
             return true;
         }
-        #endregion
     }
 }

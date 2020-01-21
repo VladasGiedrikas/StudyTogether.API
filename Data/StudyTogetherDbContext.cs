@@ -14,11 +14,12 @@ namespace StudyTogether.API.Data
 
         public StudyTogetherDbContext(DbContextOptions<StudyTogetherDbContext> options)
         : base(options)
-        {
+        {          
         }
+        // galime perrasyti virtual metodus is paveldimos klases
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
+        {          
         }
+      
     }
 }

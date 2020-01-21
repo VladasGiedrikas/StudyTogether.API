@@ -53,11 +53,5 @@ namespace StudyTogether.API.Controllers
         {
             return _main.DeleteQuestion(questionId);
         }
-
-        [HttpPost("grade", Name = "Questions_GetGrade")]
-        public ActionResult<double> GetGrade([FromBody] List<Answer> entries, int quizId)
-        {
-            return _main.GetGrade(entries, quizId);
-        }
     }
 }
